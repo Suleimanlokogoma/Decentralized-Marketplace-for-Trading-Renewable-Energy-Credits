@@ -5,9 +5,18 @@ authors = []
 telemetry = true
 cache_dir = "./.cache"
 
-# [contracts.counter]
-# path = "contracts/counter.clar"
-# epoch = "latest"
+[contracts.rec-nft]
+path = "contracts/rec-nft.clar"
+epoch = "latest"
+
+[contracts.rec-marketplace]
+path = "contracts/rec-marketplace.clar"
+epoch = "latest"
+depends_on = ["rec-nft"]
+
+[contracts.rec-verification]
+path = "contracts/rec-verification.clar"
+epoch = "latest"
 
 [repl.analysis]
 passes = ["check_checker"]
